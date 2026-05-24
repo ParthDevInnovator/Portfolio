@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/effects/Animations';
-import { ExternalLink, Github } from 'lucide-react';
+import { Code2, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
 
 const projects = [
@@ -152,7 +152,7 @@ function ProjectCard({ project }: ProjectCardProps) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Github className="w-4 h-4" />
+                <Code2 className="w-4 h-4" />
                 Code
               </motion.a>
             </motion.div>

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Code2, ExternalLink, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { ScrollReveal, FloatingElement } from '@/components/effects/Animations';
@@ -85,12 +85,12 @@ export default function Hero() {
                 <div className="flex gap-4">
                   {[
                     {
-                      icon: Github,
+                      icon: Code2,
                       href: 'https://github.com/parthmakwana',
                       label: 'GitHub',
                     },
                     {
-                      icon: Linkedin,
+                      icon: ExternalLink,
                       href: 'https://linkedin.com/in/parth-makwana',
                       label: 'LinkedIn',
                     },
