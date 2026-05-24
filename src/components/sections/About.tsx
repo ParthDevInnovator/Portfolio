@@ -47,7 +47,7 @@ export default function About() {
           <ScrollReveal>
             <div className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                I'm a software developer focused on building scalable full-stack applications, AI-powered workflows,
+                I&apos;m a software developer focused on building scalable full-stack applications, AI-powered workflows,
                 and high-performance digital experiences. I enjoy solving real-world problems with clean architecture,
                 thoughtful UI design, and modern technologies.
               </p>
@@ -60,7 +60,7 @@ export default function About() {
 
               <p className="text-lg text-gray-300 leading-relaxed">
                 Currently working on innovative projects that blend web development, AI integration, and cloud
-                infrastructure. Always eager to learn and collaborate on projects that push the boundaries of what's
+                infrastructure. Always eager to learn and collaborate on projects that push the boundaries of what&apos;s
                 possible in modern software development.
               </p>
 

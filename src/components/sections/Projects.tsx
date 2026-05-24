@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ScrollReveal, StaggerContainer, StaggerItem, FloatingElement } from '@/components/effects/Animations';
+import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/effects/Animations';
 import { ExternalLink, Github } from 'lucide-react';
 import { useState } from 'react';
 
@@ -52,7 +52,7 @@ interface ProjectCardProps {
   index: number;
 }
 
-function ProjectCard({ project, index }: ProjectCardProps) {
+function ProjectCard({ project }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
 
@@ -69,9 +69,11 @@ function ProjectCard({ project, index }: ProjectCardProps) {
       <motion.div
         className="h-full"
         onMouseMove={handleMouseMove}
-        onMouseLeave={() => setRotation({ x: 0, y: 0 })}
+        onMouseLeave={() => {
+          setRotation({ x: 0, y: 0 });
+          setIsHovered(false);
+        }}
         onMouseEnter={() => setIsHovered(true)}
-        onMouseExit={() => setIsHovered(false)}
       >
         <motion.div
           className={`relative rounded-2xl bg-gradient-to-br ${project.color} border border-white/10 backdrop-blur-xl overflow-hidden h-full group cursor-pointer`}

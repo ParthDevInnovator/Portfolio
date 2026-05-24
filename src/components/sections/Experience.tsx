@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/effects/Animations';
-import { Briefcase, Calendar } from 'lucide-react';
+import {  Calendar } from 'lucide-react';
 
 const experiences = [
   {

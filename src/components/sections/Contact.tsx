@@ -21,12 +21,12 @@ export default function Contact() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-5xl md:text-6xl font-bold leading-tight">
-                <span className="text-gradient">Let's Build Something</span>
+                <span className="text-gradient">Let&apos;s Build Something</span>
                 <br />
                 <span className="text-white">Amazing Together</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                I'm always interested in hearing about new projects and opportunities. Whether you have a question or
+                I&apos;m always interested in hearing about new projects and opportunities. Whether you have a question or
                 just want to say hi, feel free to reach out!
               </p>
             </div>
