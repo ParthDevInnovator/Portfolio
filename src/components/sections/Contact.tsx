@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ScrollReveal } from '@/components/effects/Animations';
-import { Mail, Github, Linkedin, Download } from 'lucide-react';
+import { Mail, GitHub, Linkedin, Download } from 'lucide-react';
 import { FloatingOrbs, GridBackground } from '@/components/effects/BackgroundEffects';
 
 export default function Contact() {
@@ -52,7 +52,7 @@ export default function Contact() {
                 <div className="flex flex-wrap items-center justify-center gap-4">
                   {[
                     {
-                      icon: Github,
+                      icon: GitHub,
                       label: 'GitHub',
                       href: 'https://github.com/ParthDevInnovator',
                       color: 'hover:text-white',
