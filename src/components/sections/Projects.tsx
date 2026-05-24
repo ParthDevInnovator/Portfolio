@@ -14,7 +14,7 @@ const projects = [
       'A sophisticated automation platform that leverages AI to handle Instagram direct messages intelligently. Features include context-aware response generation, payment processing, and user management.',
     tech: ['Next.js', 'TypeScript', 'Clerk', 'OpenAI API', 'Stripe'],
     image: '🤖',
-    link: '#',
+    link: null,
     github: 'https://github.com/ParthDevInnovator/Slide',
     color: 'from-purple-500/20 to-pink-500/20',
     gradient: 'from-purple-600 to-pink-600',
@@ -129,26 +129,28 @@ function ProjectCard({ project }: ProjectCardProps) {
 
             {/* Actions */}
             <motion.div
-              className="flex gap-3 pt-6 border-t border-white/10"
+              className={`flex gap-3 pt-6 border-t border-white/10 ${!project.link ? 'justify-center' : ''}`}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : 10 }}
             >
-              <motion.a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-600/80 to-purple-700/80 hover:from-purple-500 hover:to-purple-600 text-white text-sm font-medium transition-all flex items-center justify-center gap-2 group/btn"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Live Demo
-                <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-              </motion.a>
+              {project.link && (
+                <motion.a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-600/80 to-purple-700/80 hover:from-purple-500 hover:to-purple-600 text-white text-sm font-medium transition-all flex items-center justify-center gap-2 group/btn"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Live Demo
+                  <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                </motion.a>
+              )}
               <motion.a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-sm font-medium transition-all flex items-center justify-center gap-2 border border-white/20 hover:border-white/40"
+                className={`px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-sm font-medium transition-all flex items-center justify-center gap-2 border border-white/20 hover:border-white/40 ${project.link ? 'flex-1' : ''}`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
